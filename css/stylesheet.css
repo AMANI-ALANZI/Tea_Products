@@ -2016,3 +2016,48 @@ body {
         font-size: 23px;
     }
 }
+
+/* Keep the mobile navigation visible while scrolling the whole page. */
+@media (max-width: 768px) {
+    .header {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        background: rgba(255, 255, 255, .97);
+        box-shadow: 0 3px 14px rgba(35, 27, 39, .12);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+
+    .home {
+        position: relative;
+    }
+
+    .home-overlay {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+
+    .chooseus > .chooseus-line {
+        display: none !important;
+    }
+
+    .chooseus-tittle {
+        margin: 0 0 24px !important;
+    }
+
+    .chooseus-tittle::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    .chooseus-tittle::after {
+        width: 50px;
+        height: 4px;
+        margin: 6px auto 0;
+    }
+}
