@@ -1963,3 +1963,69 @@ body {
         font-size: 15px;
     }
 }
+
+/* Mobile header: remove the desktop hover line and keep the hero title balanced. */
+@media (max-width: 768px), (hover: none) {
+    .header-list li a::after,
+    .header-list li a:hover::after,
+    .header-list li a:focus::after,
+    .header-list li a:active::after {
+        display: none;
+        width: 0;
+        height: 0;
+        content: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-top: 7px;
+        padding-bottom: 9px;
+        gap: 3px;
+    }
+
+    .logo {
+        width: 82px;
+    }
+
+    .header-list {
+        padding-top: 0;
+        column-gap: 11px;
+        row-gap: 0;
+    }
+
+    .header-list li {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .header-list li a {
+        padding: 4px 1px;
+    }
+
+    .home-content {
+        top: 53%;
+    }
+
+    .home-tittle {
+        max-width: 100%;
+        margin-inline: auto;
+        font-size: clamp(24px, 7.2vw, 31px);
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 340px) {
+    .header-list {
+        column-gap: 8px;
+    }
+
+    .header-list li {
+        font-size: 11px;
+    }
+
+    .home-tittle {
+        font-size: 23px;
+    }
+}
