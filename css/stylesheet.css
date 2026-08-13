@@ -2025,7 +2025,8 @@ body {
 
     .header {
         position: fixed !important;
-        top: 0;
+        top: 0 !important;
+        inset-block-start: 0 !important;
         right: 0;
         left: 0;
         z-index: 9999;
@@ -2038,6 +2039,7 @@ body {
         transform: translateZ(0);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        transition: none;
     }
 
     .home {
