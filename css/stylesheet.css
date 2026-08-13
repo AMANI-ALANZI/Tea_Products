@@ -1403,3 +1403,319 @@ img {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* Final mobile spacing and edge alignment. */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .header {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        padding: 10px 16px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        overflow: visible;
+    }
+
+    .logo {
+        width: 92px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .header-list {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 4px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        overflow: visible;
+    }
+
+    .header-list li {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .header-list li a {
+        display: inline-block;
+        padding: 5px 2px;
+    }
+
+    .home {
+        width: 100%;
+        min-height: 620px;
+    }
+
+    .home-overlay {
+        position: absolute;
+        inset: 0;
+    }
+
+    .home-content {
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        width: calc(100% - 32px);
+        max-width: 420px;
+        padding: 28px 18px;
+        transform: translate(-50%, -50%);
+    }
+
+    .home-tittle {
+        margin: 0 0 16px;
+        font-size: clamp(30px, 9vw, 38px);
+        line-height: 1.15;
+    }
+
+    .home-p {
+        margin: 0 auto 22px;
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .btn {
+        width: min(46%, 170px);
+        min-height: 44px;
+        margin: 5px 3px;
+    }
+
+    .chooseus,
+    .tea-Category,
+    .teaware,
+    .team-container,
+    .price,
+    .people-container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 48px 16px;
+    }
+
+    .chooseus-tittle,
+    .tea-category-content > .tea-category-tittle,
+    .teaware-tittle,
+    .team-tittle,
+    .price-tittle,
+    .people-tittle {
+        margin: 0;
+        font-size: clamp(28px, 8vw, 36px);
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .chooseus-line,
+    .tea-catecory-line,
+    .teaware-line {
+        margin: 8px auto 26px !important;
+    }
+
+    .chooseus-content,
+    .tea-category-content,
+    .teaware-content1,
+    .teaware-content2,
+    .team-content,
+    .price-content,
+    .people-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .chooseus-item,
+    .tea-category-item,
+    .teaware-item,
+    .team-item,
+    .price-item,
+    .people-item1 {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .tea-category-item {
+        min-height: 300px;
+    }
+
+    .tea-category-item img,
+    .team-item img,
+    .people-item1 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .tea-category-overlay {
+        padding: 22px 16px;
+    }
+
+    .tea-category-p,
+    .aboutus-p {
+        line-height: 1.55;
+    }
+
+    .tea-category-p br,
+    .aboutus-p br {
+        display: none;
+    }
+
+    .aboutus {
+        width: 100%;
+        margin: 0;
+        padding: 48px 16px;
+    }
+
+    .aboutus-content {
+        width: 100%;
+        margin: 0;
+        gap: 24px;
+    }
+
+    .divaboutus1,
+    .divaboutus2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .aboutus-img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        border-radius: 14px;
+    }
+
+    .background-content {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding: 34px 16px;
+    }
+
+    .backround-section1 {
+        padding: 12px 4px;
+    }
+
+    .price-item {
+        min-height: 0;
+        padding: 24px 18px;
+    }
+
+    .people-tittle {
+        position: static;
+        margin-bottom: 26px;
+    }
+
+    .people-content {
+        position: static;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 32px 16px 24px;
+    }
+
+    .footer-img {
+        max-width: 110px;
+        height: auto;
+        margin: 0 auto 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-content {
+        width: calc(100% - 20px);
+        padding-inline: 12px;
+    }
+
+    .chooseus,
+    .tea-Category,
+    .teaware,
+    .team-container,
+    .price,
+    .people-container,
+    .aboutus {
+        padding-inline: 12px;
+    }
+
+    .background-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reveal the product action when the card is hovered or keyboard-focused. */
+.price-item > * {
+    position: relative;
+    z-index: 2;
+}
+
+.price-item::after {
+    pointer-events: none;
+    transition: height .35s ease, opacity .35s ease;
+}
+
+.price-item:hover::after,
+.price-item:focus-within::after {
+    height: 100%;
+    opacity: .12;
+}
+
+.price-item .btn1 {
+    z-index: 3;
+    width: min(180px, 80%);
+    min-height: 44px;
+    height: auto;
+    margin: 18px auto 0;
+    border: 1px solid #86549b;
+    border-radius: 6px;
+    background: #86549b;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s ease, background-color .3s ease;
+}
+
+.price-item:hover .btn1,
+.price-item:focus-within .btn1 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.price-item .btn1:hover,
+.price-item .btn1:focus-visible {
+    background: #6f3f83;
+    outline: 3px solid rgba(134, 84, 155, .24);
+    outline-offset: 2px;
+}
+
+@media (hover: none), (max-width: 640px) {
+    .price-item .btn1 {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
